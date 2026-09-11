@@ -90,7 +90,7 @@ Nouvelle question : {question}
 Reformule cette question pour qu'elle soit compréhensible seule, sans le reste de la conversation. Réponds UNIQUEMENT avec la question reformulée, rien d'autre."""
 
     response = client.chat.completions.create(
-        model="llama-3.1-8b-instant",  # ← Vérifie bien ce nom
+        model="llama3-8b-8192",  # ← Vérifie bien ce nom
         messages=[{"role": "user", "content": prompt}]
     )
     return response.choices[0].message.content.strip()
